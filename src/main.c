@@ -36,6 +36,9 @@ void EXTI_Config(void)
 	//For External Interrupt
 	RCC_APB2PeriphClockCmd(RCC_APB2Periph_SYSCFG, ENABLE); 			//->Open the clock of External Interrupt.
 
+	SYSCFG_EXTILineConfig(EXTI_PortSourceGPIOA, GPIO_PinSource0);   //->Open the clock of Line0.
+	SYSCFG_EXTILineConfig(EXTI_PortSourceGPIOA, GPIO_PinSource1);   //->Open the clock of Line1.
+
 	EXTI_InitTypeDef EXTI_InitStruct;                           	//->Define the structure of EXTI_Init.
 	NVIC_InitTypeDef NVIC_InitStruct;                           	//->Define the structure of NVIC_Init.
 
