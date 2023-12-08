@@ -1787,11 +1787,11 @@ void EXTI_Config(void)
  8000aa0:	f44f 4080 	mov.w	r0, #16384	; 0x4000
  8000aa4:	f7ff fe8a 	bl	80007bc <RCC_APB2PeriphClockCmd>
 
-	SYSCFG_EXTILineConfig(EXTI_PortSourceGPIOA, GPIO_PinSource0);   //->Open the clock of Line0.
+	SYSCFG_EXTILineConfig(EXTI_PortSourceGPIOA, GPIO_PinSource0);   //->Select the pin of A0 for EXTI.
  8000aa8:	2100      	movs	r1, #0
  8000aaa:	2000      	movs	r0, #0
  8000aac:	f7ff fed2 	bl	8000854 <SYSCFG_EXTILineConfig>
-	SYSCFG_EXTILineConfig(EXTI_PortSourceGPIOA, GPIO_PinSource1);   //->Open the clock of Line1.
+	SYSCFG_EXTILineConfig(EXTI_PortSourceGPIOA, GPIO_PinSource1);   //->Select the pin of A1 for EXTI.
  8000ab0:	2101      	movs	r1, #1
  8000ab2:	2000      	movs	r0, #0
  8000ab4:	f7ff fece 	bl	8000854 <SYSCFG_EXTILineConfig>
